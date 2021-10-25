@@ -14,7 +14,7 @@ def calc_wiring(dimesions):
 
 #initialise realtive path location for example files
 dirname = os.path.dirname(__file__)
-filename = os.path.join(dirname, "examples");
+filename = os.path.join(dirname, "examples\\");
 
 dimensions = [];
 
@@ -24,8 +24,8 @@ for examplefile in os.listdir(filename):
     totalshielding = 0;
     totalwiring = 0;
 
-    #iterate over each line of the current file
-    with open(filename + "\\" + examplefile) as file:
+    #open current file and iterate over each line
+    with open(filename + examplefile) as file:
         for line in file:
             #convert line from file to int list and assign values to list variable
             dimensions = list(map(int, line.split("x")));
