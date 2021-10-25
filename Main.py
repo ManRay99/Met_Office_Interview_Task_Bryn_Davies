@@ -13,9 +13,8 @@ for examplefile in os.listdir(filename):
     with open(filename+ "\\" + examplefile) as file:
         for line in file:
             dimensions = list(map(int, line.split("x")))
-            print(dimensions)
             totalshielding += calc_shielding(dimensions)
-        print("total shielding required = " + str(totalshielding));
+        print(examplefile + " total shielding required = " + str(totalshielding));
 
 
 
